@@ -1,28 +1,16 @@
-# def multiply(a,b):
-#     if b==1 :
-#         return a
-#     if a== 0 or b==0:    
-#         return 0
-#     else:
-#         return a + multiply(a,b-1)
-# def half_divided(var):
-#     n = len(str(var))
-#     var_1 = var//(10**(n//2))
-#     var_2 = var%(10**(n//2))
-#     return var_1,var_2
 def product(x,y):
-    n =(len(str(x)))
-    if n <= 1:
+    if x < 10 :
         return x*y
     else:
-        a,b = x//(10**(n//2)),x%(10**(n//2))
-        c,d = y//(10**(n//2)),y%(10**(n//2))
+        n = int(len(str(x))/2)
+        a,b = x//(10**(n)),x%(10**(n))
+        c,d = y//(10**(n)),y%(10**(n))
         p = a+b
         q = c+d
         ac = product(a,c)
         bd = product(b,d)
         pq = product(p,q)
         adbc = pq-ac-bd
-        result = 10**n * ac + (10**(n//2)) *adbc+bd
+        result = 10**2*n * ac + (10**(n)) *adbc+bd
         return result
-print(product(567,123))
+print(product(123,10000))

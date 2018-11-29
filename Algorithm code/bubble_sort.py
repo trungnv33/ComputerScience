@@ -1,5 +1,4 @@
 def swap(a,b):
-    tg  = 0
     tg = a
     a = b
     b = tg
@@ -11,7 +10,6 @@ def check(arr):
             boolean = False
     return boolean
 def bubble_sort(arr):
-    i = 0
     boo = False
     while boo == False:
         for i in range(len(arr)-1):

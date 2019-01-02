@@ -7,3 +7,4 @@ def pow(a,n):
         return pow(a,n-1)*a
     else: 
         return 1/(pow(a,-n))
+print(pow(2,64))

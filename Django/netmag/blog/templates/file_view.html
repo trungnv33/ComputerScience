@@ -1,0 +1,20 @@
+<h1> Display the database</h1>
+<table border="1">
+    <tr>
+            <th>Title</th>
+            <th>Slug</th>
+            <th>Description</th>
+            <th>Content</th>
+            <th>Published</th>
+    </tr>
+{%for obj in my_post%}
+    <tr>
+                <th>{{obj.title}}</th>
+                <th>{{obj.slug}}</th>
+                <th>{{obj.description}}</th>
+                <th>{{obj.content}}</th>
+                <th>{{obj.published}}</th>
+    </tr>
+{%endfor%}
+       
+</table>

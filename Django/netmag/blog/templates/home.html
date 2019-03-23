@@ -1,0 +1,14 @@
+<title>
+    Building for the 1st time
+</title>
+{%block content%}
+<h1>
+    This is the first blog template
+    </h1>
+<ul>
+        {%for post in all_post%}
+        <li>{{forloop.counter}}-<a href = "{%url 'detail' post.id%}">{{post.title|upper}}</a></li>
+        <li>{{forloop.counter}}-<a href = "{{post.get_absolute_url}}">{{post.title|upper}} Cach 2 loai bo hardcode</a></li>
+        {%endfor%}
+</ul>
+{%endblock%}
